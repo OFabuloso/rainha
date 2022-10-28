@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    opacity: 1;
+}
+b{
+    color: rgb(153, 31, 153);
+}
+ul{
+    list-style: none;
+}
+/*-------------Area de edição letras---------------------------------------*/
+strong{
+    color: rgb(218, 146, 214);
+}
+
+/*------------------------Acima os reset--------------------------------*/
+
+body {
+    background-image: url('/src/image/ESTETICA.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px;
+
+    font-family: 'Courgette', cursive;
+    color: #f3f3f3;
+    font-size: 15px;
+}
+
+.cartao{
+    background-color: rgba(245, 40, 145, 0.47);
+    width: 370px;
+    border: 2px solid #f700ff;
+    border-radius: 24px;
+    overflow: hidden;
+    animation: movimentoInicialCartao 4s backwards;
+    
+    
+}
+
+.cartao .minhas-informacoes {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.cartao .minhas-informacoes img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #e500fa;
+    animation: movimentoInicialCartao 4s backwards;
+}
+
+.cartao .minhas-informacoes .nome{
+    font-size: 26px;
+    color: pink;
+    -webkit-text-stroke-width: 0.01px;
+    -webkit-text-stroke-color: #000;
+}
+
+.cartao .minhas-informacoes .cargo{
+    font-size: 20px;
+    color: #96149b;
+}
+
+.cartao .conteudo {
+    margin-top: 15px;
+}
+
+.cartao .abas{
+    display: flex;
+}
+
+.cartao .abas .aba{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+.cartao .abas .aba.selecionado{
+    background-color:rgba(177, 42, 112, 0.55);
+    border-radius: 3px;
+}
+
+.cartao .informacoes-aba{
+    background-color: rgba(177, 42, 112, 0.55);
+}
+
+.cartao .abas .aba:hover{
+    background-color: rgba(177, 42, 112, 0.55);
+}
+
+.cartao .abas img{
+    width: 50px;
+}
+
+.informacoes-aba .informacao{
+    min-height: 260px;
+    padding: 15px;
+    display: none;
+    animation: movimentoInformacao 2.3s backwards;
+}
+
+.informacoes-aba .informacao.selecionado{
+    display: block;
+}
+.informacoes-aba .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.informacoes-aba .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.informacoes-aba .descricao span{
+    color: #880472;
+}
+
+.informacoes-aba .descricao aside{
+    color: #970a84 ;
+    font-size: 10px;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.redes-sociais li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding:10px;
+    font-size: 20px;
+}
+
+.redes-sociais .instagram{
+    background-color: rgba(255, 57, 86, 0.75);
+}
+.redes-sociais .Facebook{
+   background-color: #1d87bd;
+}
+
+.redes-sociais .galeria{
+    background-color:#545454;
+}
+
+/*--------------PSEUDO CLASSE HOVER NAS REDES SOCIAS---------------------------*/
+
+.redes-sociais li a:hover{
+    opacity: 0.6;
+}
+
+@keyframes movimentoInicialCartao{
+    from{
+        transform: translatey(-580px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes movimentoInformacao{
+    from{
+        transform: translateX(-440px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
